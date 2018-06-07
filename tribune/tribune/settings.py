@@ -11,6 +11,14 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import sys
+from django.core.wsgi import get_wsgi_application
+# application = get_wsgi_application()
+
+
+path = '/home/myusername/mysite'
+if path not in sys.path:
+    sys.path.append(path)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
